@@ -3,31 +3,32 @@
 <head>
     <title>Daniel Myint Plumbing</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
     <div class="TopHeaders">
 
-        <section class="emergency">
+        <section class="top_heading">
                 <h1>Daniel Myint Plumbing</h1>               
                 
                 
                 <nav>
                 <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
+                <a href="#quote-form">Get Free Quote</a>
                 </nav>
                 <!-- <a class="call-emergency" href="tel:0400000000">Call 0400 000 000</a> -->
-                 <a class="floating-call-btn" href="tel:0400000000">📞 Call 0400 000 000</a>
-            </section>
+                <a class="floating-call-btn" href="tel:0400000000">📞 Call 0400 512 433</a>
+        </section>
     </div>
 
     <section class="hero">
         <h1>Need a Plumber Right Now?</h1>
         <h2>Your Reliable Plumbing Experts In Town</h2>
-        <p>Don't let a small leak turn into a big disaster. Call us now for fast service.</p>
-        <p>Fast and professional plumbing services. From leaky faucets to full pipe replacements, our certified professionals deliver fast, guaranteed service when you need it most.</p>
-        <button>Get Free Quote</button>
+        <h2>Don't let a small leak turn into a big disaster. Call us now for fast service.</h2>
+       
     </section>
 
     <section class="plumber-image-section">
@@ -41,29 +42,81 @@
 
     <section id="services">
         <!-- <h2 class="service">Our Services</h2> -->
+        <div class="service">
+            <h3>Pipe Relining</h3>
+            
+        </div>
 
         <div class="service">
-            <h3>Repairs</h3>
-            <p>Leaky taps, toilets and pipes.</p>
+            <h3>Burst Pipe Repairs</h3>
+            <!-- <p>Leaky taps, toilets and pipes.</p> -->
         </div>
 
         <div class="service">
             <h3>Drain Cleaning</h3>
-            <p>Blocked sinks and sewer lines.</p>
+            <!-- <p>Blocked sinks and sewer lines.</p> -->
         </div>
 
         <div class="service">
             <h3>Water Heaters</h3>
-            <p>Installation and repair.</p>
+            <!-- <p>Installation and repair.</p> -->
+        </div>
+
+        <div class="service">
+            <h3>Leak Detection</h3>
+            
+        </div>
+
+        <div class="service">
+            <h3>Gas Fitting & Leak</h3>
+            
+        </div>
+
+        <div class="service">
+            <h3>General Plumbing</h3>
+            <!-- <p>Leaky taps, toilets and pipes.</p> -->
         </div>
 
     </section>
 
+    <h2 class="our_services_title">Request A Free Quote</h2>
+    <section id="quote-form" class="quote-form">
+
+        <!-- <form action="https://formspree.io/f/xkoqgqry" method="POST"> -->
+        <form id="smsForm">
+
+        <label>Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label>Phone No</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label>Email</label>
+        <input type="email" id="email" name="email">
+
+        <label>Service Required</label>
+        <select id="service" name="service">
+        <option>General Plumbing</option>
+        <option>Leak Repair</option>
+        <option>Blocked Drain</option>
+        <option>Water Heater</option>
+        <option>Emergency Plumbing</option>
+        </select>
+
+        <label>Suburb</label>
+        <input type="text" id="suburb" name="suburb">
+
+        <label>Additional Information</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Get A Free Quote</button>
+
+        </form>
+    </section>
+
     <!-- Customer Review Section -->
+    <h2 class="our_services_title">What Our Customers Say</h2>
     <section class="testimonials">
-
-        <h2 class="our_services_title">What Our Customers Say</h2>
-
         <div class="review">
         <p>"Fast service and very professional. Fixed my leaking pipe in 20 minutes!"</p>
         <strong>- Michael, Brisbane</strong>
@@ -81,7 +134,7 @@
 
             <h2>Contact Us</h2>
               <div class="contact-info">
-                <p><strong>Phone:</strong> 0400 000 000</p>
+                <p><strong>Phone:</strong> 0400 512 433</p>
                 <p><strong>Email:</strong> danielmyintplumbing@email.com</p>
                 <p><strong>Location:</strong> 67 Hillgrove Street, Taigum, Brisbane, Australia</p>
             </div>
@@ -104,5 +157,29 @@
         <p>© 2026 Daniel Myint Plumbing</p>
     </footer>
 
+
+<script>
+document.getElementById("smsForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let service = document.getElementById("service").value;
+    let suburb = document.getElementById("suburb").value;
+    let message = document.getElementById("message").value;
+
+    let smsMessage =
+    "Plumbing Request:%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Email: " + email + "%0A" +
+    "Service: " + service + "%0A" +
+    "Suburb: " + suburb + "%0A" +
+    "Info: " + message;
+
+    window.location.href = "sms:0400512433?body=" + smsMessage;
+});
+</script>
 </body>
 </html>

@@ -64,7 +64,8 @@ nav a:hover {
   right: 20px;
   background: #ff6600;
   color: white;
-  padding: 15px 20px;
+  padding: 18px 25px; /* slightly bigger floating call button */
+  font-size: 18px;
   border-radius: 50px;
   font-weight: bold;
   text-decoration: none;
@@ -84,6 +85,22 @@ nav a:hover {
     text-align:center;
     padding:60px 20px;
 }
+
+  .emergency h2 {
+    font-size: 28px; /* bigger emergency heading */
+  }
+
+    .emergency p {
+    font-size: 18px; /* bigger emergency paragraph */
+  }
+
+.testimonials h2 {
+    font-size: 28px; /* bigger testimonials heading */
+  }
+
+.review p {
+    font-size: 17px; /* bigger review text */
+  }
 
 /* Hero Section */
 
@@ -108,7 +125,8 @@ nav a:hover {
   color: white;
   border: none;
   padding: 12px 25px;
-  font-size: 16px;
+  width: 100%;
+  font-size: 18px;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -161,6 +179,7 @@ nav a:hover {
   border-radius: 6px;
   text-align: center;
   background: #f4f4f4;
+  font-size: 28px;
 }
 
 .service {
@@ -175,6 +194,7 @@ nav a:hover {
 .service h3 {
   margin-bottom: 10px;
   color: #0077cc;
+  font-size: 22px; /* bigger service headings */
 }
 
 .testimonials{
@@ -212,6 +232,7 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
+  font-size: 16px; /* bigger footer text */
 }
 
 /* Images Responsive */
@@ -232,18 +253,19 @@ img {
   nav a {
     display: block;
     margin: 10px 0;
+    font-size: 18px; /* bigger navigation links */
   }
 
   .hero h2 {
-    font-size: 28px;
+    font-size: 36px; /* bigger hero title */
   }
-
-  .hero p {
-    font-size: 16px;
+    .hero p {
+    font-size: 18px; /* bigger hero paragraph */
   }
 
   .service {
     width: 100%;
+    font-size: 18px; /* bigger text inside service boxes */
   }
 
   .hero button {

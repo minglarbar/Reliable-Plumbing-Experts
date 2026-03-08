@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Body */
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+
+header {
+  background: #0077cc;
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+/* Navigation */
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Call Button */
+
+.callbtn {
+  display: inline-block;
+  background: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Floating Call Button */
+.floating-call-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff6600;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.floating-call-btn:hover {
+  background: #e65c00;
+  transform: scale(1.05);
+}
+
+.emergency{
+    background:#0077cc;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+/* Hero Section */
+
+.hero {
+  background: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero button:hover {
+  background: #005fa3;
+}
+
+/* Services Section */
+
+#services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.TopHeaders{
+  text-align: center;
+}
+
+#services h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* Plumbing Image Section */
+
+.plumber-image-section {
+  width: 100%;
+  padding: 60px 0;
+  background: #f4f4f4;
+}
+
+.image-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Service Boxes */
+
+.our_services_title{
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.service {
+  display: inline-block;
+  width: 300px;
+  background: #f4f4f4;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 6px;
+}
+
+.service h3 {
+  margin-bottom: 10px;
+  color: #0077cc;
+}
+
+.testimonials{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.review{
+    background:#f4f4f4;
+    margin:20px auto;
+    padding:20px;
+    max-width:600px;
+    border-radius:6px;
+}
+/* Footer */
+
+
+.call-emergency{
+    display:inline-block;
+    margin-top:20px;
+    background:#ff6600;
+    color:white;
+    padding:15px 25px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:6px;
+}
+
+.map{
+    margin-top:30px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Images Responsive */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile Friendly */
+
+@media (max-width: 768px) {
+
+  header {
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .service {
+    width: 100%;
+  }
+
+  .hero button {
+    width: 100%;
+  }
+
+}

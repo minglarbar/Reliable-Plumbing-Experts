@@ -76,6 +76,7 @@ nav a:hover {
   /* border-radius: 50px; */
   font-weight: bold;
   text-decoration: none;
+  text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   z-index: 1000;
   transition: background 0.3s, transform 0.2s;
@@ -337,3 +338,4 @@ img {
   }
 
 }
+

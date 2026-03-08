@@ -82,37 +82,36 @@
     <h2 class="our_services_title">Request A Free Quote</h2>
     <section id="quote-form" class="quote-form">
 
-        <!-- <form action="https://formspree.io/f/xkoqgqry" method="POST"> -->
-        <form id="smsForm">
-
-        <label>Name</label>
-        <input type="text" id="name" name="name" required>
+    <form id="quoteForm">
+        <div>
+            <label>Name</label>
+            <input type="text" name="name" id="name" required>
+        </div>
 
         <label>Phone No</label>
-        <input type="tel" id="phone" name="phone" required>
+        <input type="tel" name="phone" id="phone" required>
 
         <label>Email</label>
-        <input type="email" id="email" name="email">
+        <input type="email" name="email" id="email">
 
         <label>Service Required</label>
-        <select id="service" name="service">
-        <option>General Plumbing</option>
-        <option>Leak Repair</option>
-        <option>Blocked Drain</option>
-        <option>Water Heater</option>
-        <option>Emergency Plumbing</option>
+        <select name="service" id="service">
+            <option>General Plumbing</option>
+            <option>Leak Repair</option>
+            <option>Blocked Drain</option>
+            <option>Water Heater</option>
+            <option>Emergency Plumbing</option>
         </select>
 
         <label>Suburb</label>
-        <input type="text" id="suburb" name="suburb">
+        <input type="text" name="suburb" id="suburb">
 
         <label>Additional Information</label>
-        <textarea id="message" name="message" rows="4"></textarea>
+        <textarea name="message" id="message" rows="4"></textarea>
 
         <button type="submit">Get A Free Quote</button>
-
-        </form>
-    </section>
+    </form>
+</section>
 
     <!-- Customer Review Section -->
     <h2 class="our_services_title">What Our Customers Say</h2>
@@ -157,29 +156,66 @@
         <p>© 2026 Daniel Myint Plumbing</p>
     </footer>
 
+    <div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>✅ Request Sent Successfully</h3>
+        <p>Thank you! We will contact you shortly.</p>
+    </div>
+    </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-document.getElementById("smsForm").addEventListener("submit", function(e){
+emailjs.init({
+  publicKey: "QMeN3Vqx6sZoMFy0w"
+});
+
+
+
+
+document.getElementById("quoteForm").addEventListener("submit", function(e){
     e.preventDefault();
 
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let email = document.getElementById("email").value;
-    let service = document.getElementById("service").value;
-    let suburb = document.getElementById("suburb").value;
-    let message = document.getElementById("message").value;
+    const params = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        email: document.getElementById("email").value,
+        service: document.getElementById("service").value,
+        suburb: document.getElementById("suburb").value,
+        message: document.getElementById("message").value
+    };
 
-    let smsMessage =
-    "Plumbing Request:%0A" +
-    "Name: " + name + "%0A" +
-    "Phone: " + phone + "%0A" +
-    "Email: " + email + "%0A" +
-    "Service: " + service + "%0A" +
-    "Suburb: " + suburb + "%0A" +
-    "Info: " + message;
+    emailjs.send("service_au3jk24", "template_ggd8flk",params)
+    .then(function(){
 
-    window.location.href = "sms:0416664910?body=" + smsMessage;
+        document.getElementById("quoteForm").reset();
+
+        const modal = document.getElementById("successModal");
+        modal.style.display = "flex";
+
+        setTimeout(function(){
+            modal.style.display = "none";
+        },4000);
+
+    })
+    .catch(function(error){
+        alert("Failed to send message.");
+        console.log(error);
+    });
 });
+
+const modal = document.getElementById("successModal");
+const closeBtn = document.querySelector(".close-btn");
+
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 </script>
 </body>
 </html>

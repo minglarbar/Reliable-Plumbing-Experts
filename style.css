@@ -44,7 +44,7 @@ nav a {
   text-decoration: none;
   margin-right: 20px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 nav a:hover {
@@ -66,14 +66,14 @@ nav a:hover {
 /* Floating Call Button */
 .floating-call-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  left:20px;
+  bottom: 30px;
+  right: 0px;
+  left: 0px;
   background: #ff6600;
   color: white;
   padding: 18px 25px; /* slightly bigger floating call button */
   font-size: 18px;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   font-weight: bold;
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);

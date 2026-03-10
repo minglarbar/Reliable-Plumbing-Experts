@@ -1,44 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Daniel Myint Plumbing</title>
+
+    <!-- 
+    BASIC SEO STTINGS
+    NEEED TO CUSTOMISE TITLE, DESCRIPTION, KEYWORDS, AUTHOR 
+    Why this matters
+    Title → appears in Google search results
+
+    Description → summary shown in search
+
+    Keywords → small SEO signal
+    -->
+    <meta charset="UTF-8">
+    <title>Daniel Myint Plumbing | Reliable Plumber in Taigum QLD</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daniel Myint Plumbing provides reliable plumbing services in Taigum, Carseldine, Aspley and surrounding Brisbane suburbs. Call now for fast and affordable plumbing services.">
+    <meta name="keywords" content="plumber Taigum, plumbing services Taigum, emergency plumber Brisbane, plumber Carseldine, plumber Aspley">
+    <meta name="author" content="Daniel Myint Plumbing">
+    
+
+    <!-- BASIC SEO STTINGS
+    Add Open Graph Tags (For Social Sharing)
+    When someone shares the site on Facebook or WhatsApp, these tags control the preview. 
+    NEED TO CUSTOMISE THE URL, CONTENT, DESCRIPTIONS, IMAGE CONTENT
+    -->
+    <meta property="og:title" content="Daniel Myint Plumbing">
+    <meta property="og:description" content="Reliable plumbing services in Taigum and surrounding suburbs. Fast response and affordable rates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/plumbing-preview.jpg">
+
+    <!-- 
+    BASIC SEO STTINGS    
+    This helps Google understand the business. 
+    NEED TO CUSTOMISE DATA ACCORDINGLY
+    -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Daniel Myint Plumbing",
+    "telephone": "0416664910",
+    "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "67 Hillgrove Street",
+    "addressLocality": "Taigum",
+    "addressRegion": "QLD",
+    "postalCode": "4018",
+    "addressCountry": "AU"
+    },
+    "areaServed": "Brisbane",
+    "url": "https://yourwebsite.com"
+    }
+    </script>
 </head>
 
 <body>
 
+    <!-- Header Section -->
     <div class="TopHeaders">
-
         <section class="top_heading">
-                <h2>Daniel Myint Plumbing</h2>               
-                
-                
+                <!-- 
+                Important SEO rule: only one H1 per page 
+                Sub headings use h2, sub sub headings use h3 and so on
+                -->
+                <h1><a href="#top" style="color:white;">Daniel Myint Plumbing</a></h1>           
+
                 <nav>
-                <a href="#services">Services</a>
+                <a href="#top">Home</a>
+                <a href="#our-services">Services</a>
                 <a href="#contact">Contact</a>
                 <a href="#quote-form">Get Free Quote</a>
+                <a href="#area">Service Area</a>
+                <a href="#review">Customer Review</a>
                 </nav>
                 <!-- <a class="call-emergency" href="tel:0400000000">Call 0400 000 000</a> -->
                 <a class="floating-call-btn" href="tel:0416664910">📞 Call 0416 664 910</a>
         </section>
     </div>
 
-    <section class="hero">
+    <!-- Intro Text Message Section (Hero Section) -->
+    <section class="hero" id="top">
         <h2>Need a Plumber Right Now?</h2>
         <!-- <h2>Your Reliable Plumbing Experts In Town</h2> -->
-        <h2>Don't let a small leak turn into a big disaster. Call us now for fast service.</h2>
-       
+        <h2>Don't let a small leak turn into a big disaster. Call us now for fast service.</h2>  
+        <p>
+            We are a trusted local plumber serving in North Brisbane suburbs.
+        </p>
     </section>
 
+    <!-- Main Image Section -->
     <section class="plumber-image-section">
         <div class="image-container">
         <img src="./Plumber.png"
-                alt="Professional plumber fixing pipes">
+                alt="Plumber repairing leaking pipes">
         </div>
     </section>
 
-    <h2 class="our_services_title">Our Services</h2>
+    <h2 class="our_services_title" id="our-services">Our Services</h2>
 
     <section id="services">
         <!-- <h2 class="service">Our Services</h2> -->
@@ -79,8 +140,39 @@
 
     </section>
 
-    <h2 class="our_services_title">Request A Free Quote</h2>
-    <section id="quote-form" class="quote-form">
+    <!-- Contact Us Section -->
+    <h2 class="contact_us_title" id="contact">Contact Us</h2>
+    <section class="contact-section">
+
+    <div class="contact-card">
+        <div class="icon-circle">
+            <img src="./phone-call.png" alt="Phone">
+        </div>
+        <h3>Call Us</h3>
+        <p><a href="tel:0416664910">0416 664 910</a></p>
+    </div>
+
+    <div class="contact-card">
+        <div class="icon-circle">
+            <img src="./email.png" alt="Email">
+        </div>
+        <h3>Email</h3>
+        <p><a href="mailto:taigummoe@gmail.com">taigummoe@gmail.com</a></p>
+    </div>
+
+    <div class="contact-card">
+        <div class="icon-circle">
+            <img src="./location.png" alt="Address">
+        </div>
+        <h3>Address</h3>
+        <p style="text-decoration: none;">67 Hillgrove Street<br>Taigum QLD 4018</p>
+    </div>
+
+    </section>
+
+    <!-- Get Free Quote Section -->
+    <h2 class="free_quote_title" id="quote-form">Request A Free Quote</h2>
+    <section class="quote-form">
 
     <form id="quoteForm">
         <div>
@@ -98,9 +190,14 @@
         <select name="service" id="service">
             <option>General Plumbing</option>
             <option>Leak Repair</option>
-            <option>Blocked Drain</option>
-            <option>Water Heater</option>
+            <option>Drain Cleaning</option>
+            <option>Water Heater Installation/Repair</option>
             <option>Emergency Plumbing</option>
+            <option>Pipe Relining</option>
+            <option>Gas Fitting & Leak</option>
+            <option>Burst Pipe Repairs</option>
+            <option>Leak Detection</option>           
+            <option>Other</option>
         </select>
 
         <label>Suburb</label>
@@ -111,37 +208,61 @@
 
         <button type="submit">Get A Free Quote</button>
     </form>
-</section>
+    </section>
+
+    <!-- Service Area Section -->
+    <h2 class="service_area_title" id="area">Service Areas</h2>
+    <section class="service-area">
+    <div class="service-area-container">
+
+    <div class="service-map">
+    <iframe
+    src="https://www.google.com/maps?q=67+Hillgrove+Street+Taigum+QLD+4018&output=embed"
+    loading="lazy">
+    </iframe>
+    </div>
+
+    <div class="service-suburbs">
+    <h3>We Service These Areas</h3>
+
+    <ul>
+        <li>Taigum</li>
+        <li>Sandgate</li>
+        <li>Schorncliffe</li>
+        <li>Deagon</li>
+        <li>Bracken Ridge</li>
+        <li>Carseldine</li>
+        <li>Aspley</li>
+        <li>Fitzgibbon</li>
+        <li>Zillmere</li>
+        <li>Boondall</li>
+    </ul>
+
+    </div>
+
+    </div>
+
+    </section>
 
     <!-- Customer Review Section -->
-    <h2 class="our_services_title">What Our Customers Say</h2>
+    <!-- NEED TO CUSTOMISE -->
+    <h2 class="testimonial_title" id="review">What Our Customers Say</h2>
     <section class="testimonials">
         <div class="review">
         <p>"Fast service and very professional. Fixed my leaking pipe in 20 minutes!"</p>
-        <strong>- Michael, Brisbane</strong>
+        <strong>- Michael, Sandgate</strong>
         </div>
 
         <div class="review">
         <p>"Highly recommended. Very friendly and affordable plumbing service."</p>
-        <strong>- Sarah, Gold Coast</strong>
+        <strong>- Sarah, Deagon</strong>
         </div>
 
     </section>
 
-    <footer>
-        <section id="contact" class="contact-section">
-
-            <h2>Contact Us</h2>
-              <div class="contact-info">
-                <p><strong>Phone:</strong> 0416 664 910</p>
-                <p><strong>Email:</strong> danielmyintplumbing@email.com</p>
-                <p><strong>Location:</strong> 67 Hillgrove Street, Taigum, Brisbane, Australia</p>
-            </div>
-
-            <!-- <p>Need plumbing help? Send us a message or call us anytime.</p> -->
-            
-           
-            <div class="map">
+    <!-- Footer Section -->
+    <footer> 
+            <!-- <div class="map">
                 <iframe
                 src="https://www.google.com/maps?q=Brisbane+Australia&output=embed"
                 width="100%"
@@ -150,12 +271,15 @@
                 allowfullscreen=""
                 loading="lazy">
                 </iframe>
-            </div>          
-        </section>
-        <br/><br/>
-        <p>© 2026 Daniel Myint Plumbing</p>
+            </div>
+            <p></p><p></p> -->
+        <p>QBCC: 1234567890</p>
+        <p>LIC: L12345</p>
+        <p>Licenced & Insured</p>
+        <p>© 2026 Daniel Myint Plumbing. All rights reserved.</p>
     </footer>
 
+    <!-- Modal window for result -->
     <div id="successModal" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
@@ -166,12 +290,13 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
+    // Conants value of EmailJs API
+    const public_key = "QMeN3Vqx6sZoMFy0w"
+    const service_key ="service_au3jk24";
+    const template_key = "template_ggd8flk";
 emailjs.init({
-  publicKey: "QMeN3Vqx6sZoMFy0w"
+  publicKey: public_key
 });
-
-
-
 
 document.getElementById("quoteForm").addEventListener("submit", function(e){
     e.preventDefault();
@@ -185,7 +310,7 @@ document.getElementById("quoteForm").addEventListener("submit", function(e){
         message: document.getElementById("message").value
     };
 
-    emailjs.send("service_au3jk24", "template_ggd8flk",params)
+    emailjs.send(service_key, template_key,params)
     .then(function(){
 
         document.getElementById("quoteForm").reset();

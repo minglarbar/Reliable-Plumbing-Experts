@@ -68,13 +68,16 @@
                 -->
                 <h1><a href="#top" style="color:white;">Daniel Myint Plumbing</a></h1>           
 
-                <nav>
-                <a href="#top">Home</a>
-                <a href="#our-services">Services</a>
-                <a href="#contact">Contact</a>
-                <a href="#quote-form">Get Free Quote</a>
-                <a href="#area">Service Area</a>
-                <a href="#review">Customer Review</a>
+                <!-- Add humberger menu -->
+                <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+
+                <nav id="mainNav">
+                    <a href="#top">Home</a>
+                    <a href="#our-services">Services</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#quote-form" class="quote-btn">Get Free Quote</a>
+                    <a href="#area">Service Area</a>
+                    <a href="#review">Customer Review</a>
                 </nav>
                 <!-- <a class="call-emergency" href="tel:0400000000">Call 0400 000 000</a> -->
                 <a class="floating-call-btn" href="tel:0416664910">📞 Call 0416 664 910</a>
@@ -83,61 +86,55 @@
 
     <!-- Intro Text Message Section (Hero Section) -->
     <section class="hero" id="top">
+
+        <img src="images/Plumber.png" alt="Plumber repairing leaking pipes">
+
+        <div class="hero-overlay">
+
         <h2>Need a Plumber Right Now?</h2>
-        <!-- <h2>Your Reliable Plumbing Experts In Town</h2> -->
-        <h2>Don't let a small leak turn into a big disaster. Call us now for fast service.</h2>  
-        <p>
-            We are a trusted local plumber serving in North Brisbane suburbs.
-        </p>
+
+        <p>Don't let a small leak turn into a big disaster.</p>
+
+        <p>Trusted local plumber servicing North Brisbane suburbs.</p>
+
+        <a href="tel:0416664910" class="hero-call">
+        📞 Call Now
+        </a>
+
+        </div>
+
     </section>
 
-    <!-- Main Image Section -->
-    <section class="plumber-image-section">
-        <div class="image-container">
-        <img src="./Plumber.png"
-                alt="Plumber repairing leaking pipes">
-        </div>
-    </section>
+
 
     <h2 class="our_services_title" id="our-services">Our Services</h2>
 
     <section id="services">
-        <!-- <h2 class="service">Our Services</h2> -->
-        <div class="service">
-            <h3>Pipe Relining</h3>
-            
-        </div>
 
         <div class="service">
+            <img src="images/pipe_relining.jpg" alt="Pipe Relining">
+            <h3>Pipe Relining</h3>            
+        </div>
+        <div class="service">
+            <img src="images/burst_pipe.jpg" alt="Burst Pipe Repairs">
             <h3>Burst Pipe Repairs</h3>
-            <!-- <p>Leaky taps, toilets and pipes.</p> -->
         </div>
-
         <div class="service">
+            <img src="images/block_drain.jpg" alt="Drain Cleaning">
             <h3>Drain Cleaning</h3>
-            <!-- <p>Blocked sinks and sewer lines.</p> -->
         </div>
-
         <div class="service">
-            <h3>Water Heaters</h3>
-            <!-- <p>Installation and repair.</p> -->
+            <img src="images/water_heater.jpg" alt="Water Heaters Repair/Installation">
+            <h3>Water Heaters Repair/Installation</h3>
         </div>
-
         <div class="service">
-            <h3>Leak Detection</h3>
-            
+            <img src="images/leak_detection.jpg" alt="Water/Gas Leak Detection">
+            <h3>Water/Gas Leak Detection</h3>
         </div>
-
         <div class="service">
-            <h3>Gas Fitting & Leak</h3>
-            
-        </div>
-
-        <div class="service">
+            <img src="images/general_plumbing.jpg" alt="General Plumbing">
             <h3>General Plumbing</h3>
-            <!-- <p>Leaky taps, toilets and pipes.</p> -->
         </div>
-
     </section>
 
     <!-- Contact Us Section -->
@@ -146,7 +143,7 @@
 
     <div class="contact-card">
         <div class="icon-circle">
-            <img src="./phone-call.png" alt="Phone">
+            <img src="images/phone-call.png" alt="Phone">
         </div>
         <h3>Call Us</h3>
         <p><a href="tel:0416664910">0416 664 910</a></p>
@@ -154,7 +151,7 @@
 
     <div class="contact-card">
         <div class="icon-circle">
-            <img src="./email.png" alt="Email">
+            <img src="images/email.png" alt="Email">
         </div>
         <h3>Email</h3>
         <p><a href="mailto:taigummoe@gmail.com">taigummoe@gmail.com</a></p>
@@ -162,7 +159,7 @@
 
     <div class="contact-card">
         <div class="icon-circle">
-            <img src="./location.png" alt="Address">
+            <img src="images/location.png" alt="Address">
         </div>
         <h3>Address</h3>
         <p style="text-decoration: none;">67 Hillgrove Street<br>Taigum QLD 4018</p>
@@ -248,14 +245,19 @@
     <!-- NEED TO CUSTOMISE -->
     <h2 class="testimonial_title" id="review">What Our Customers Say</h2>
     <section class="testimonials">
-        <div class="review">
-        <p>"Fast service and very professional. Fixed my leaking pipe in 20 minutes!"</p>
-        <strong>- Michael, Sandgate</strong>
-        </div>
 
-        <div class="review">
-        <p>"Highly recommended. Very friendly and affordable plumbing service."</p>
-        <strong>- Sarah, Deagon</strong>
+        <div class="testimonial-slider">
+
+            <div class="review active">
+                <p>"Fast service and very professional. Fixed my leaking pipe in 20 minutes!"</p>
+                <strong>- Michael, Sandgate</strong>
+            </div>
+
+            <div class="review">
+                <p>"Highly recommended. Very friendly and affordable plumbing service."</p>
+                <strong>- Sarah, Deagon</strong>
+            </div>
+
         </div>
 
     </section>
@@ -341,6 +343,49 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+// This code is for showing testimonials as slide show
+let reviews = document.querySelectorAll(".review");
+let reviewIndex = 0;
+
+function showReview(){
+        reviews.forEach(function(r){
+        r.classList.remove("active");
+    });
+
+    reviews[reviewIndex].classList.add("active");
+
+    reviewIndex++;
+
+    if(reviewIndex >= reviews.length){
+        reviewIndex = 0;
+    }
+
+}
+
+showReview();
+
+setInterval(showReview, 4000);
 </script>
+
+<!-- This script is for hamburger menu for mobiles -->
+<script>
+    const menuBtn = document.getElementById("menuToggle");
+    const nav = document.getElementById("mainNav");
+    const navLinks = document.querySelectorAll("#mainNav a");
+
+    menuBtn.addEventListener("click", function(){
+    nav.classList.toggle("show");
+    });
+
+    /* Close menu when clicking a link */
+    navLinks.forEach(function(link){
+    link.addEventListener("click", function(){
+        nav.classList.remove("show");
+        });
+    });
+</script>
+
 </body>
 </html>

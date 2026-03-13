@@ -77,73 +77,6 @@ nav a:hover {
   cursor:pointer;
 }
 
-.hero{
-  position:relative;
-  width:100%;
-  overflow:hidden;
-}
-
-
-/* Hero Image */
-
-.hero img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-/* Text Overlay */
-
-.hero-overlay{
-  position:absolute;
-
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-
-  background:rgba(0,0,0,0.6);
-  color:white;
-
-  padding:25px 30px;
-  border-radius:8px;
-
-  text-align:center;
-
-  max-width:90%;
-  box-sizing:border-box;
-}
-
-/* Hero Heading */
-
-.hero-overlay h2{
-  font-size:clamp(26px,4vw,40px);
-  margin-bottom:10px;
-}
-
-/* Hero Text */
-
-.hero-overlay p{
-  font-size:18px;
-  margin-bottom:10px;
-}
-
-/* Call Button */
-
-.hero-call{
-display:inline-block;
-margin-top:10px;
-background:#ff6600;
-color:white;
-padding:12px 24px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-font-size:18px;
-}
-
-.hero-call:hover{
-background:#e65c00;
-}
 
 /* Call Button */
 
@@ -216,41 +149,75 @@ scroll-margin-top: 200px;
     font-size: 17px; /* bigger review text */
   }
 
-/* Hero Section */
 
-.hero {
-  background: #f4f4f4;
-  padding: 60px 20px;
-  text-align: center;
+/* HERO SECTION */
+
+.hero{
+  position:relative;
+  width:100%;
 }
 
-.hero h1 {
-  font-size: clamp(28px, 5vw, 40px);
+/* Hero Image */
+
+.hero img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  display:block;
 }
 
-.hero h2 {
-  font-size: clamp(18px, 4vw, 26px);
+/* Text Overlay */
+
+.hero-overlay{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+  background:rgba(0,0,0,0.6);
+  color:white;
+
+  padding:25px 30px;
+  border-radius:8px;
+
+  text-align:center;
+
+  width:90%;
+  max-width:650px;
 }
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
+/* Hero Heading */
+
+.hero-overlay h2{
+  font-size:clamp(26px,4vw,40px);
+  margin-bottom:10px;
 }
 
-.hero button {
-  background: #0077cc;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  width: 100%;
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 5px;
+/* Hero Text */
+
+.hero-overlay p{
+  font-size:18px;
+  margin-bottom:10px;
 }
 
-.hero button:hover {
-  background: #005fa3;
+/* Call Button */
+
+.hero-call{
+  display:inline-block;
+  margin-top:10px;
+  background:#ff6600;
+  color:white;
+  padding:12px 24px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:18px;
 }
+
+.hero-call:hover{
+  background:#e65c00;
+}
+
 
 /* Trust Worth Section*/
 .trust-bar{
@@ -717,26 +684,25 @@ img {
     display:flex;
   }
 
-  .hero{
-    padding:30px 15px;
-  }
-
+  /* hero related */
   .hero img{
-    height:350px;
+      height:320px;
   }
 
   .hero-overlay{
     padding:15px 18px;
-    max-width:92%;
+    width:92%;
+  }
+
+  .hero-overlay h2{
+    font-size:22px;
   }
 
   .hero-overlay p{
     font-size:15px;
   }
 
-  .hero-overlay h2{
-    font-size:22px;
-  }
+  
   .trust-bar{
     gap:15px;
     font-size:14px;

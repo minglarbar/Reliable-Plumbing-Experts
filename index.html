@@ -101,6 +101,11 @@
             📞 Call Now
             </a>
 
+            <div class="hero-rating">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+                <p>4.9 Google Rating – Trusted by North Brisbane Customers</p>
+            </div>
+
         </div>
     </section>
 
@@ -233,19 +238,19 @@
     <h3>We Service These Areas</h3>
 
     <ul>
-        <li>Taigum</li>
-        <li>Sandgate</li>
-        <li>Schorncliffe</li>
-        <li>Deagon</li>
-        <li>Bracken Ridge</li>
-        <li>Carseldine</li>
-        <li>Aspley</li>
-        <li>Fitzgibbon</li>
-        <li>Zillmere</li>
-        <li>Boondall</li>
+        <li>✔ Taigum</li>
+        <li>✔ Sandgate</li>
+        <li>✔ Schorncliffe</li>
+        <li>✔ Deagon</li>
+        <li>✔ Bracken Ridge</li>
+        <li>✔ Carseldine</li>
+        <li>✔ Fitzgibbon</li>
+        <li>✔ Zillmere</li>
+        <li>✔ Boondall</li>
     </ul>
 
     </div>
+
 
     </div>
 
@@ -310,12 +315,24 @@
 
     <!-- Modal window for result -->
     <div id="successModal" class="modal">
+
+        <div class="modal-content success-box">
+
+            <div class="checkmark-circle">
+            <div class="checkmark"></div>
+        </div>
+
+        <h3 id="thank-you"></h3>
+    </div>
+
+    </div>
+    <!-- <div id="successModal" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
         <h3>✅ Request Sent Successfully</h3>
-        <p>Thank you! We will contact you shortly.</p>
+        <p id="thank-you">Thank you! We will contact you shortly.</p>
     </div>
-    </div>
+    </div> -->
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
@@ -339,12 +356,17 @@ document.getElementById("quoteForm").addEventListener("submit", function(e){
         message: document.getElementById("message").value
     };
 
+    var name = document.getElementById("name").value;
+    
     emailjs.send(service_key, template_key,params)
     .then(function(){
 
         document.getElementById("quoteForm").reset();
 
         const modal = document.getElementById("successModal");
+       
+        
+        document.getElementById("thank-you").innerHTML = `Thanks ${name}! Your plumbing request has been sent. We'll contact you soon.`;
         modal.style.display = "flex";
 
         setTimeout(function(){
